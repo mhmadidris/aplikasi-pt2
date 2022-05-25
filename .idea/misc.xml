@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/idris/Downloads/Laundry/app/src/main/res/drawable/ic_baseline_arrow_forward_24.xml" value="0.1405" />
+        <entry key="..\:/Users/idris/Downloads/Laundry/app/src/main/res/drawable/radio_normal.xml" value="0.1685" />
+        <entry key="..\:/Users/idris/Downloads/Laundry/app/src/main/res/drawable/radio_selected.xml" value="0.1685" />
+        <entry key="..\:/Users/idris/Downloads/Laundry/app/src/main/res/drawable/radio_selector.xml" value="0.1685" />
+        <entry key="..\:/Users/idris/Downloads/Laundry/app/src/main/res/drawable/text_color.xml" value="0.1685" />
+        <entry key="..\:/Users/idris/Downloads/Laundry/app/src/main/res/font/poppins_extrabold.xml" value="0.21666666666666667" />
+        <entry key="..\:/Users/idris/Downloads/Laundry/app/src/main/res/layout-v26/activity_laundry.xml" value="0.25" />
+        <entry key="..\:/Users/idris/Downloads/Laundry/app/src/main/res/layout/activity_kiloan.xml" value="0.22" />
+        <entry key="..\:/Users/idris/Downloads/Laundry/app/src/main/res/layout/activity_laundry.xml" value="0.25" />
+        <entry key="..\:/Users/idris/Downloads/Laundry/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/idris/Downloads/Laundry/app/src/main/res/layout/activity_rincian_kiloan.xml" value="0.18645833333333334" />
+        <entry key="..\:/Users/idris/Downloads/Laundry/app/src/main/res/layout/activity_riwayat.xml" value="0.25" />
+        <entry key="..\:/Users/idris/Downloads/Laundry/app/src/main/res/layout/fragment_home.xml" value="0.22" />
+        <entry key="..\:/Users/idris/Downloads/Laundry/app/src/main/res/layout/fragment_kiloan.xml" value="0.14583333333333334" />
+        <entry key="..\:/Users/idris/Downloads/Laundry/app/src/main/res/layout/fragment_riwayat.xml" value="0.5" />
+        <entry key="..\:/Users/idris/Downloads/Laundry/app/src/main/res/layout/item_laundry.xml" value="0.1" />
+        <entry key="..\:/Users/idris/Downloads/Laundry/app/src/main/res/layout/item_riwayat.xml" value="0.1" />
+        <entry key="..\:/Users/idris/Downloads/Laundry/app/src/main/res/layout/kiloan_display.xml" value="0.18132716049382716" />
+        <entry key="..\:/Users/idris/Downloads/Laundry/app/src/main/res/layout/laundry.xml" value="0.1" />
+        <entry key="..\:/Users/idris/Downloads/Laundry/app/src/main/res/menu/bottom_menu.xml" value="0.1" />
+        <entry key="..\:/Users/idris/Downloads/Laundry/app/src/main/res/menu/bottom_rincian.xml" value="0.18645833333333334" />
+        <entry key="..\:/Users/idris/Downloads/Laundry/app/src/main/res/menu/card_kiloan_menu.xml" value="0.18229166666666666" />
+        <entry key="..\:/Users/idris/Downloads/Laundry/app/src/main/res/menu/fragment_card.xml" value="0.18645833333333334" />
+        <entry key="..\:/Users/idris/Downloads/Laundry/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

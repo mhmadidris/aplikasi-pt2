@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:paddingBottom="50dp"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            tools:context=".Rincian">
+
+            <TextView
+                android:id="@+id/nomorLaundryHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:text="No Laundry:"
+                android:textSize="16sp"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/nomorLaundryDisplay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:text="012121212"
+                android:textSize="20sp"
+                app:layout_constraintTop_toBottomOf="@+id/nameHeader" />
+
+            <TextView
+                android:id="@+id/nameHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Name:"
+                android:textSize="16sp"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/nameDisplay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Muhammad Idris"
+                android:textSize="20sp"
+                app:layout_constraintTop_toBottomOf="@+id/nameHeader" />
+
+            <TextView
+                android:id="@+id/alamatHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:paddingTop="10dp"
+                android:text="Address:"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/nameDisplay" />
+
+            <TextView
+                android:id="@+id/alamatDisplay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Sukapura"
+                android:textSize="20sp"
+                app:layout_constraintTop_toBottomOf="@+id/alamatHeader" />
+
+            <TextView
+                android:id="@+id/phoneHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:paddingTop="10dp"
+                android:text="Phone:"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/alamatDisplay" />
+
+            <TextView
+                android:id="@+id/phoneDisplay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:text="085882311829"
+                android:textSize="20sp"
+                app:layout_constraintTop_toBottomOf="@+id/phoneHeader" />
+
+            <TextView
+                android:id="@+id/weightHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:paddingTop="10dp"
+                android:text="Weight:"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/phoneDisplay" />
+
+            <TextView
+                android:id="@+id/weightDisplay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:text="200 gram"
+                android:textSize="20sp"
+                app:layout_constraintTop_toBottomOf="@+id/weightHeader" />
+
+            <TextView
+                android:id="@+id/notesHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:paddingTop="10dp"
+                android:text="Notes:"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/weightDisplay" />
+
+            <TextView
+                android:id="@+id/notesDisplay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Lorem ipsum"
+                android:textSize="20sp"
+                app:layout_constraintTop_toBottomOf="@+id/notesHeader" />
+
+            <TextView
+                android:id="@+id/jenisHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:paddingTop="10dp"
+                android:text="Jenis Laundry:"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/notesDisplay" />
+
+            <TextView
+                android:id="@+id/jenisDisplay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:text="YES"
+                android:textSize="20sp"
+                app:layout_constraintTop_toBottomOf="@+id/jenisHeader" />
+
+            <TextView
+                android:id="@+id/priceHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:paddingTop="10dp"
+                android:text="Total:"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/notesDisplay" />
+
+            <TextView
+                android:id="@+id/priceDisplay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Rp. 50.000"
+                android:textSize="20sp"
+                app:layout_constraintTop_toBottomOf="@+id/priceHeader" />
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigatin_view"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/purple_500"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|center_horizontal"
+            android:text="PROCESS"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:typeface="normal" />
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+</androidx.constraintlayout.widget.ConstraintLayout>

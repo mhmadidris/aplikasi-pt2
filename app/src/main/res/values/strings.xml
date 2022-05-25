@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Laundry</string>
+    <string name="selamat_datang">Selamat Datang</string>
+    <string name="nama">John Smith</string>
+    <string name="layanan">Layanan</string>
+    <string name="logo">Logo</string>
+    <string name="data_laundry">Data Laundry</string>
+    <string name="pemasukan">Pemasukan</string>
+    <string name="pemasukanharga">Rp.1.500.000</string>
+    <string name="transaksi">Transaksi</string>
+    <string name="orang">10 Orang</string>
+    <string name="kiloan">Kiloan</string>
+    <string name="setrika">Setrika</string>
+    <string name="riwayatTransaction">Riwayat Transaksi</string>
+    <string name="berat_badan">Berat</string>
+    <string name="nama_member">Nama Member</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

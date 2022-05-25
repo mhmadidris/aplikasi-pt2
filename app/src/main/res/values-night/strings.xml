@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="orang" />
+    <string name="cuci_basah">Cuci Basah</string>
+    <string name="setrika">Setrika</string>
+    <string name="riwayatTransaction">Riwayat Transaksi</string>
+    <string name="nama_member">Nama Member</string>
+</resources>
