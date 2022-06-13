@@ -8,14 +8,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Laundry">
-        <!--        <activity-->
-        <!--            android:name=".Riwayat"-->
-        <!--            android:exported="false" />-->
         <activity
-            android:name=".Kiloan"
+            android:name=".ui.activity.DetailActivity"
             android:exported="false" />
         <activity
-            android:name=".Rincian"
+            android:name=".ui.activity.Rincian"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.Kiloan"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

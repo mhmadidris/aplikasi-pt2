@@ -4,14 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/my_nav"
     app:startDestination="@id/homeFragment">
+
     <fragment
         android:id="@+id/homeFragment"
-        android:name="org.pt2.laundry.ui.HomeFragment"
+        android:name="org.pt2.laundry.ui.fragment.HomeFragment"
         android:label="Home"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/riwayatFragment"
-        android:name="org.pt2.laundry.ui.RiwayatFragment"
+        android:name="org.pt2.laundry.ui.fragment.RiwayatFragment"
         android:label="History"
         tools:layout="@layout/fragment_riwayat" />
+    <activity
+        android:id="@+id/kiloanActivity"
+        android:name="org.pt2.laundry.ui.activity.Kiloan"
+        android:label="activity_kiloan"
+        tools:layout="@layout/activity_kiloan" />
 </navigation>

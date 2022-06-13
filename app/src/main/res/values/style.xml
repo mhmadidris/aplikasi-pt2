@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <style name="ShapeAppearanceOverlay.App.SelectedCornerRadius" parent="">
         <item name="cornerSizeBottomRight">75dp</item>
         <item name="cornerSizeBottomLeft">75dp</item>
+    </style>
+
+    <style name="poppins_medium">
+        <item name="fontFamily">@font/poppins_medium</item>
     </style>
 
 </resources>

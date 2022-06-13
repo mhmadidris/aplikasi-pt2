@@ -1,40 +1,72 @@
 package org.pt2.laundry.riwayat
 
-import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
 import android.widget.TextView
+import androidx.cardview.widget.CardView
+import androidx.recyclerview.widget.RecyclerView
 import org.pt2.laundry.R
 import org.pt2.laundry.model.Laundry
-import org.pt2.laundry.model.Riwayat
+import org.pt2.laundry.ui.activity.DetailActivity
 import java.text.DecimalFormat
+import java.text.NumberFormat
+import java.util.*
+import kotlin.collections.ArrayList
 
-class RiwayatAdapter(val lCtx: Context, val layoutResId: Int, val ldList: MutableList<Riwayat>) :
-    ArrayAdapter<Riwayat>(lCtx, layoutResId, ldList) {
+class RiwayatAdapter(
+    private val laundryList: ArrayList<Laundry>
+) : RecyclerView.Adapter<RiwayatAdapter.MyViewHolder>() {
 
-    override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
-        val layoutInflater: LayoutInflater = LayoutInflater.from(lCtx)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
 
-        val view: View = layoutInflater.inflate(layoutResId, null)
+        val itemView = LayoutInflater.from(parent.context).inflate(
+            R.layout.item_riwayat,
+            parent, false
+        )
+        return MyViewHolder(itemView)
+    }
 
-        val kodeDisplay: TextView = view.findViewById(R.id.nomorText)
-        val nameDisplay: TextView = view.findViewById(R.id.nameDisplay)
-        val beratDisplay: TextView = view.findViewById(R.id.beratDisplay)
-        val jenisDisplay: TextView = view.findViewById(R.id.jenisDisplay)
-        val totalDisplay: TextView = view.findViewById(R.id.totalDisplay)
+    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
 
-        val laundry = ldList[position]
+        val currentitem = laundryList[position]
 
-        kodeDisplay.text = laundry.kodeTransaction
-        nameDisplay.text = laundry.name
-        val berat = laundry.weight
-        beratDisplay.text = berat + " kg"
-        jenisDisplay.text = laundry.jenis
-        val rupiah = laundry.totalPrice
-        totalDisplay.text = "Rp." + rupiah
+        holder.cardClick.setOnClickListener {
+            val intent = Intent(it.context, DetailActivity::class.java)
+            intent.putExtra("kodeT", currentitem.kodeTransaksi.toString())
+            it.context.startActivity(intent)
+        }
 
-        return view
+        holder.kodeDisplay.text = currentitem.kodeTransaksi
+        holder.nameDisplay.text = currentitem.name
+        holder.jenisDisplay.text = currentitem.jenisKiloan
+        holder.statusDisplay.text = currentitem.status
+        val berat = currentitem.weight.toString() + " kg"
+        holder.weightDisplay.text = berat
+
+        val formatter = NumberFormat.getCurrencyInstance(Locale("in", "ID"))
+        val result = formatter.format(currentitem.totalPrice.toString().toInt())
+
+        holder.hargaDisplay.text = result
+
+    }
+
+    override fun getItemCount(): Int {
+
+        return laundryList.size
+    }
+
+    class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+
+        val kodeDisplay: TextView = itemView.findViewById(R.id.nomorText)
+        val nameDisplay: TextView = itemView.findViewById(R.id.nameDisplay)
+        val jenisDisplay: TextView = itemView.findViewById(R.id.jenisDisplay)
+        val statusDisplay: TextView = itemView.findViewById(R.id.notifText)
+        val weightDisplay: TextView = itemView.findViewById(R.id.beratDisplay)
+        val hargaDisplay: TextView = itemView.findViewById(R.id.totalDisplay)
+
+        val cardClick: CardView = itemView.findViewById(R.id.cardBox)
+
     }
 }

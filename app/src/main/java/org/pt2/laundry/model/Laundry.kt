@@ -1,14 +1,13 @@
 package org.pt2.laundry.model
 
 data class Laundry(
-    val id: String,
-    val kodeTransaction : String,
-    val name: String,
-    val alamat: String,
-    val phone: String,
-    val weight: CharSequence?,
-    val notes: String,
-    val jenis: String,
-    val status: String,
-    val totalPrice: CharSequence?
+    var kodeTransaksi : String ?= null,
+    var name: String ?= null,
+    val address: String?= null,
+    val phoneNumber: String ?= null,
+    var weight: Int ?= 0,
+    val notes: String ?= null,
+    var jenisKiloan: String ?= null,
+    val status: String ?= null,
+    var totalPrice: Int ?= 0
 )
