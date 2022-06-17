@@ -51,7 +51,6 @@ class RiwayatFragment : Fragment() {
 
             laundryRecylerView.adapter = RiwayatAdapter(laundryArrayList)
         }
-
     }
 
     private fun onCreateActivity() {

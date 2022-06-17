@@ -69,15 +69,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/row1">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginHorizontal="10sp"
-                    android:fontFamily="@font/poppins_bold"
-                    android:text="Layanan"
-                    android:textColor="#000000"
-                    android:textSize="20sp" />
-
                 <GridLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -165,6 +156,24 @@
                                 android:textSize="14sp" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
+                </GridLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="2.5dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="start"
+                    android:text="Layanan"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:columnCount="2">
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/kiloanCard"

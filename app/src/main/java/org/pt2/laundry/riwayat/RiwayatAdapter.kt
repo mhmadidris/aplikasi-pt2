@@ -10,10 +10,8 @@ import androidx.recyclerview.widget.RecyclerView
 import org.pt2.laundry.R
 import org.pt2.laundry.model.Laundry
 import org.pt2.laundry.ui.activity.DetailActivity
-import java.text.DecimalFormat
 import java.text.NumberFormat
 import java.util.*
-import kotlin.collections.ArrayList
 
 class RiwayatAdapter(
     private val laundryList: ArrayList<Laundry>
