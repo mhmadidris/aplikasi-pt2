@@ -6,9 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".ui.fragment.HomeFragment">
 
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/item_shimmer_home" />
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
     <ScrollView
+        android:id="@+id/homeLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:visibility="gone"
         android:fillViewport="true"
         tools:ignore="MissingConstraints,ScrollViewCount">
 
@@ -32,30 +48,62 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="25dp"
-                    android:gravity="center_vertical"
-                    android:orientation="vertical"
-                    tools:ignore="UselessParent">
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
 
-                    <TextView
-                        android:id="@+id/selamatDatang"
-                        android:layout_width="match_parent"
+                    <LinearLayout
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins_bold"
-                        android:text="Selamat Datang"
-                        android:textColor="#FFFFFF"
-                        android:textSize="24sp" />
+                        android:layout_gravity="center_vertical|start"
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/idLaundryText"
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_bold"
+                            android:text="Selamat Datang"
+                            android:textColor="#FFFFFF"
+                            android:textSize="24sp" />
+
+                        <TextView
+                            android:id="@+id/idLaundryText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="Laundry Berkah Jaya"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins_semibold"
-                        android:text="Laundry Berkah Jaya"
-                        android:textColor="#FFFFFF"
-                        android:textSize="20sp" />
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical|end"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            android:id="@+id/profileBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="Profile"
+                            android:src="@drawable/ic_baseline_account_circle_24" />
+                    </LinearLayout>
                 </LinearLayout>
+
+                <!--                    <LinearLayout-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="match_parent"-->
+                <!--                        android:gravity="center_vertical|end">-->
+
+                <!--                        <ImageView-->
+                <!--                            android:layout_width="34dp"-->
+                <!--                            android:layout_height="34dp"-->
+                <!--                            tools:src="@drawable/laundry" />-->
+                <!--                    </LinearLayout>-->
+
             </LinearLayout>
 
             <LinearLayout
@@ -76,8 +124,8 @@
                     android:columnCount="2">
 
                     <androidx.cardview.widget.CardView
-                        android:layout_width="150dp"
-                        android:layout_height="150dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_rowWeight="1"
                         android:layout_columnWeight="1"
                         android:layout_margin="10dp"
@@ -117,8 +165,8 @@
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
-                        android:layout_width="150dp"
-                        android:layout_height="150dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_rowWeight="1"
                         android:layout_columnWeight="1"
                         android:layout_margin="10dp"

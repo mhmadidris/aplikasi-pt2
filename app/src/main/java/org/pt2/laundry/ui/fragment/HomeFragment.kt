@@ -7,14 +7,22 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.facebook.shimmer.ShimmerFrameLayout
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.*
 import com.google.firebase.firestore.FirebaseFirestore
 import org.pt2.laundry.databinding.FragmentHomeBinding
 import org.pt2.laundry.ui.activity.Kiloan
+import org.pt2.laundry.ui.activity.ProfileActivity
 
 class HomeFragment : Fragment() {
 
     private lateinit var binding: FragmentHomeBinding
-    private lateinit var db: FirebaseFirestore
+    private var database: FirebaseDatabase? = null
+    private var databaseReference: DatabaseReference? = null
+    private lateinit var auth: FirebaseAuth
+
+    private lateinit var shimmerFrameLayout: ShimmerFrameLayout
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -26,9 +34,21 @@ class HomeFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
+
+        shimmerFrameLayout = binding.shimmerHome
+        shimmerFrameLayout.startShimmer()
+
         binding.kiloanCard.setOnClickListener {
             activity?.let {
                 val intent = Intent(it, Kiloan::class.java)
+                it.startActivity(intent)
+            }
+        }
+
+        binding.profileBtn.setOnClickListener {
+            activity?.let {
+                val intent = Intent(it, ProfileActivity::class.java)
                 it.startActivity(intent)
             }
         }
@@ -39,6 +59,11 @@ class HomeFragment : Fragment() {
         // Sukses
         laundryRef.whereEqualTo("status", "Success").get().addOnCompleteListener { task ->
             if (task.isSuccessful) {
+
+                shimmerFrameLayout.stopShimmer()
+                shimmerFrameLayout.visibility = View.GONE
+                binding.homeLayout.visibility = View.VISIBLE
+
                 var count = 0
                 task.result?.let {
                     for (snapshot in it) {
@@ -57,6 +82,11 @@ class HomeFragment : Fragment() {
         // Proses
         laundryRef.whereEqualTo("status", "Proses").get().addOnCompleteListener { task ->
             if (task.isSuccessful) {
+
+                shimmerFrameLayout.stopShimmer()
+                shimmerFrameLayout.visibility = View.GONE
+                binding.homeLayout.visibility = View.VISIBLE
+
                 var count = 0
                 task.result?.let {
                     for (snapshot in it) {
@@ -71,15 +101,27 @@ class HomeFragment : Fragment() {
                 }
             }
         }
-    }
 
-    override fun onResume() {
-        super.onResume()
-        (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
-    }
+        // Auth Data
+        auth = FirebaseAuth.getInstance()
+        database = FirebaseDatabase.getInstance()
+        databaseReference = database?.reference!!.child("users")
 
-    override fun onStop() {
-        super.onStop()
-        (activity as AppCompatActivity?)!!.supportActionBar!!.show()
+        val user = auth.currentUser
+        val userReference = databaseReference?.child(user?.uid!!)
+
+        userReference?.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                shimmerFrameLayout.stopShimmer()
+                shimmerFrameLayout.visibility = View.GONE
+                binding.homeLayout.visibility = View.VISIBLE
+
+                binding.idLaundryText.text = snapshot.child("name").value.toString()
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                println("onCancelled")
+            }
+        })
     }
 }
