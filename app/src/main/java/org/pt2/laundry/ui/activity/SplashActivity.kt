@@ -1,10 +1,9 @@
 package org.pt2.laundry.ui.activity
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import org.pt2.laundry.MainActivity
-import org.pt2.laundry.R
 import org.pt2.laundry.databinding.ActivitySplashBinding
 
 class SplashActivity : AppCompatActivity() {
