@@ -75,7 +75,7 @@ class SignupFragment : Fragment() {
 
                     Toast.makeText(
                         this@SignupFragment.context,
-                        "Registrasi gagal",
+                        "Selamat datang",
                         Toast.LENGTH_SHORT
                     ).show()
                 } else {
